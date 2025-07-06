@@ -1,0 +1,57 @@
+
+body {
+  margin: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: auto;
+  font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), /* gradient overlay */
+    url('/src/assets/pirate.png') no-repeat center center / cover;
+  background-attachment: fixed;
+}
+
+.chest {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.chest img {
+  max-width: 100%;
+  width: 550px;
+  height: 550px;
+  object-fit:contain; /* or 'cover' depending on desired fit */
+}
+
+
+.spinning {
+  animation: spin 1s ease;
+}
+
+@keyframes spin {
+  from { transform: rotateY(0); }
+  to { transform: rotateY(360deg); }
+}
+
+.reset-btn {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 10px 20px;
+  background-color: #ffd700;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s;
+}
+
+.reset-btn:hover {
+  background-color: #ffb700;
+}
